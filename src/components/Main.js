@@ -26,7 +26,7 @@ class Main extends Component {
    render() {
        return (
            <div className="main">
-               <Profile />
+               <Profile playerInfo={this.state.playerInfo} />
            </div>
        );
    }
