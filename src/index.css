@@ -4,6 +4,7 @@
 @import './styles/Main.css';
 @import './styles/Profile.css';
 @import './styles/ShotChart.css';
+@import './styles/DataViewContainer.css';
 
 body {
   margin: 0;
