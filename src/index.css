@@ -5,7 +5,7 @@
 @import './styles/Profile.css';
 @import './styles/ShotChart.css';
 @import './styles/DataViewContainer.css';
-@import './styles/SearchBar.css'
+@import './styles/SearchBar.css';
 
 body {
   margin: 0;
