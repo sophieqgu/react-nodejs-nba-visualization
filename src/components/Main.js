@@ -11,8 +11,7 @@ class Main extends Component {
    constructor() {
      super();
      this.state = {
-       playerInfo: {},
-       playerId: 201939
+       playerInfo: DEFAULT_PLAYER_INFO
      }
    }
 
@@ -39,10 +38,10 @@ class Main extends Component {
    render() {
        return (
            <div className="main">
-             <SearchBar handleSelectPlayer={this.handleSelectPlayer}>
+             <SearchBar handleSelectPlayer={this.handleSelectPlayer} />
              <div className="player">
                <Profile playerInfo={this.state.playerInfo} />
-               <DataViewContainer playerId={this.state.playerId} />
+               <DataViewContainer playerId={this.state.playerInfo.playerId} />
              </div>
            </div>
        );
