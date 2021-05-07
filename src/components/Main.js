@@ -5,6 +5,8 @@ import Profile from './Profile';
 import DataViewContainer from './DataViewContainer';
 import SearchBar from './SearchBar'
 
+import { DEFAULT_PLAYER_INFO } from '../constants';
+
 class Main extends Component {
    constructor() {
      super();
@@ -16,19 +18,28 @@ class Main extends Component {
 
    componentDidMount() {
       window.nba = nba;
-      nba.stats.playerInfo({ PlayerID: nba.findPlayer('Stephen Curry').playerId})
-           .then((info) => {
-               console.log(info);
-               const playInfo = Object.assign(info.commonPlayerInfo[0], info.playerHeadlineStats[0]);
-               console.log(playInfo);
-               this.setState({ playerInfo: playInfo });
-           })
+      this.loadPlayerInfo(DEFAULT_PLAYER_INFO.fullName);
+   }
+
+   handleSelectPlayer = (playerName) => {
+       this.loadPlayerInfo(playerName);
+
+   }
+
+   loadPlayerInfo = (playerName) => {
+      nba.stats.playerInfo({ PlayerID: nba.findPlayer(playerName).playerId})
+        .then((info) => {
+         console.log(info);
+         const playInfo = Object.assign(info.commonPlayerInfo[0], info.playerHeadlineStats[0]);
+         console.log(playInfo);
+         this.setState({ playerInfo: playInfo });
+      })
    }
 
    render() {
        return (
            <div className="main">
-             <SearchBar />
+             <SearchBar handleSelectPlayer={this.handleSelectPlayer}>
              <div className="player">
                <Profile playerInfo={this.state.playerInfo} />
                <DataViewContainer playerId={this.state.playerId} />

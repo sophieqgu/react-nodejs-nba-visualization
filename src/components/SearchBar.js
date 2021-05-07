@@ -23,6 +23,10 @@ class SearchBar extends Component {
        });
   }
 
+  onSelect = (name) => {
+       this.props.handleSelectPlayer(name);
+   }
+
 
   render() {
       const { dataSource } = this.state;
