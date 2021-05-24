@@ -7,10 +7,10 @@ It implements four features:
 - Changing Chart Type to display in Hexbin or Scatter. 
 - Switching tooltip on and off. 
 
-<img src="src/assets/demo/NBA-demo-search.gif" alt="NBA-demo-search" height=400>
-<img src="src/assets/demo/NBA-demo-threshold.gif" alt="NBA-demo-threshold" height=400>
-<img src="src/assets/demo/NBA-demo-chartType.gif" alt="NBA-demo-chartType" height=400>
-<img src="src/assets/demo/NBA-demo-toolTip.gif" alt="NBA-demo-toolTip" height=400>
+<img src="src/assets/demo/NBA-demo-search.gif" alt="NBA-demo-search">
+<img src="src/assets/demo/NBA-demo-threshold.gif" alt="NBA-demo-threshold">
+<img src="src/assets/demo/NBA-demo-chartType.gif" alt="NBA-demo-chartType">
+<img src="src/assets/demo/NBA-demo-toolTip.gif" alt="NBA-demo-toolTip">
 
 ## Behind the scenes
 ### Dependencies 
